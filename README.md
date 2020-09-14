@@ -13,6 +13,7 @@ No parameters
 ### Sample API call
 
 Url: `http://localhost:11740/api/playlist`
+
 Metod: `GET`
 
 ```json
