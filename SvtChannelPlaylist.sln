@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvtChannelPlaylist.Api", "SvtChannelPlaylist.Api\SvtChannelPlaylist.Api.csproj", "{F95F6E11-2E28-4E24-AF78-D6593CDF1732}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvtChannelPlaylist.Dispatcher", "SvtChannelPlaylist.Dispatcher\SvtChannelPlaylist.Dispatcher.csproj", "{0954BFAD-9E2A-43C8-A80A-16AD150230CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F95F6E11-2E28-4E24-AF78-D6593CDF1732}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F95F6E11-2E28-4E24-AF78-D6593CDF1732}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F95F6E11-2E28-4E24-AF78-D6593CDF1732}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F95F6E11-2E28-4E24-AF78-D6593CDF1732}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0954BFAD-9E2A-43C8-A80A-16AD150230CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0954BFAD-9E2A-43C8-A80A-16AD150230CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0954BFAD-9E2A-43C8-A80A-16AD150230CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0954BFAD-9E2A-43C8-A80A-16AD150230CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {53CC9BFB-5D38-40A8-AD71-A5A34DD716B0}
+	EndGlobalSection
+EndGlobal
