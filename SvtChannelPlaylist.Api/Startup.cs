@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SvtChannelPlaylist.Dispatcher.GetPlaylistByProgramId;
+using SvtChannelPlaylist.Dispatcher.Playlists;
 
 namespace SvtChannelPlaylist.Api
 {
@@ -18,7 +18,7 @@ namespace SvtChannelPlaylist.Api
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddHttpClient<IGetPlaylistByChannelIdDispatcher, GetPlaylistByChannelIdDispatcher>();
+            services.AddHttpClient<IPlaylistsDispatcher, PlaylistsDispatcher>();
 
             services.AddControllers();
         }

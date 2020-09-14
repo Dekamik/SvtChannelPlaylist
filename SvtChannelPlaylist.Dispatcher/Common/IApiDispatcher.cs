@@ -7,6 +7,6 @@ namespace SvtChannelPlaylist.Dispatcher.Common
 {
     public interface IApiDispatcher<TResponse>
     {
-        Task<TResponse> GetAsync(IDictionary<string, string> parameters);
+        Task<TResponse> GetAsync(string route, IDictionary<string, string> parameters);
     }
 }

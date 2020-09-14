@@ -22,7 +22,7 @@ namespace SvtChannelPlaylist.Dispatcher.Common
             _httpClient = httpClient;
         }
 
-        public virtual async Task<TResponse> GetAsync(IDictionary<string, string> parameters)
+        public async Task<TResponse> GetAsync(string route, IDictionary<string, string> parameters)
         {
             if (_httpClient.BaseAddress == null)
             {
@@ -32,7 +32,7 @@ namespace SvtChannelPlaylist.Dispatcher.Common
             TResponse responseObject = default;
             string parametersString = ParseParameters(parameters);
 
-            HttpResponseMessage response = await _httpClient.GetAsync(parametersString);
+            HttpResponseMessage response = await _httpClient.GetAsync($"{route}?{parametersString}");
 
             if (response.IsSuccessStatusCode)
             {
@@ -43,6 +43,6 @@ namespace SvtChannelPlaylist.Dispatcher.Common
             return responseObject;
         }
 
-        private string ParseParameters(IDictionary<string, string> parameters) => "?format=json" + string.Join("", parameters.Select(p => $"&{p.Key}={p.Value}"));
+        private string ParseParameters(IDictionary<string, string> parameters) => "format=json" + string.Join("", parameters.Select(p => $"&{p.Key}={p.Value}"));
     }
 }

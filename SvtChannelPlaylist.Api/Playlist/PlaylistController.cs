@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using SvtChannelPlaylist.Api.Playlist.Models;
-using SvtChannelPlaylist.Dispatcher.GetPlaylistByProgramId;
-using SvtChannelPlaylist.Dispatcher.GetPlaylistByProgramId.Models;
+using SvtChannelPlaylist.Dispatcher.Playlists;
+using SvtChannelPlaylist.Dispatcher.Playlists.Models;
 
 namespace SvtChannelPlaylist.Api.Playlist
 {
@@ -12,9 +11,9 @@ namespace SvtChannelPlaylist.Api.Playlist
     [ApiController]
     public class PlaylistController : ControllerBase
     {
-        private readonly IGetPlaylistByChannelIdDispatcher _playlistDispatcher;
+        private readonly IPlaylistsDispatcher _playlistDispatcher;
 
-        public PlaylistController(IGetPlaylistByChannelIdDispatcher playlistDispatcher)
+        public PlaylistController(IPlaylistsDispatcher playlistDispatcher)
         {
             _playlistDispatcher = playlistDispatcher;
         }
@@ -22,15 +21,18 @@ namespace SvtChannelPlaylist.Api.Playlist
         [HttpGet]
         public async Task<IActionResult> GetPlaylist()
         {
-            SongList list = await _playlistDispatcher.GetAsync(new Dictionary<string, string>
-            {
-                { "id", "132" },
-                { "startdatetime", "2020-09-10" },
-                { "enddatetime", "2020-09-13" },
-                { "size", "100" }
-            });
+            SongList list = await _playlistDispatcher.GetPlaylistByChannelId(
+                132, 
+                DateTime.Parse("2020-09-10"), 
+                DateTime.Parse("2020-09-13"), 
+                100);
 
             return Ok(new PlaylistResponse());
+        }
+
+        private PlaylistResponse CreateModel(SongList list)
+        {
+            throw new NotImplementedException();
         }
     }
 }

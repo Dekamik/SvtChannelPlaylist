@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace SvtChannelPlaylist.Dispatcher.GetPlaylistByProgramId.Models
+namespace SvtChannelPlaylist.Dispatcher.Playlists.Models
 {
     public class Song
     {
