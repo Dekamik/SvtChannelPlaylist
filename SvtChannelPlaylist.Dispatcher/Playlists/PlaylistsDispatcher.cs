@@ -14,6 +14,14 @@ namespace SvtChannelPlaylist.Dispatcher.Playlists
             Url = new Uri("http://api.sr.se/api/v2/playlists/");
         }
 
+        /// <summary>
+        /// Gets a channel's playlist
+        /// </summary>
+        /// <param name="id">Channel ID</param>
+        /// <param name="start">Date from</param>
+        /// <param name="end">Date to</param>
+        /// <param name="size">Max amount of songs to fetch</param>
+        /// <returns>A <see cref="SongList"/> for specified channel</returns>
         public async Task<SongList> GetPlaylistByChannelId(int id, DateTime? start, DateTime? end, int? size)
         {
             var parameters = new Dictionary<string, string>

@@ -25,7 +25,7 @@ namespace SvtChannelPlaylist.Api.Playlist
         public async Task<IActionResult> GetPlaylist()
         {
             SongList list = await _playlistDispatcher.GetPlaylistByChannelId(
-                132, 
+                132, // P1
                 DateTime.Parse("2020-09-10"), 
                 DateTime.Parse("2020-09-13"), 
                 100);
