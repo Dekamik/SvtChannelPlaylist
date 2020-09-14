@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace SvtChannelPlaylist.Dispatcher.Common
 {
-    public interface IApiDispatcher<TResponse>
+    public interface IApiDispatcher
     {
-        Task<TResponse> GetAsync(string route, IDictionary<string, string> parameters);
+        Task<TResponse> GetAsync<TResponse>(string route, IDictionary<string, string> parameters);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SvtChannelPlaylist.Dispatcher.Common
 {
-    public abstract class ApiDispatcher<TResponse> : IApiDispatcher<TResponse>
+    public abstract class ApiDispatcher : IApiDispatcher
     {
         private readonly HttpClient _httpClient;
 
@@ -22,11 +22,11 @@ namespace SvtChannelPlaylist.Dispatcher.Common
             _httpClient = httpClient;
         }
 
-        public async Task<TResponse> GetAsync(string route, IDictionary<string, string> parameters)
+        public async Task<TResponse> GetAsync<TResponse>(string route, IDictionary<string, string> parameters)
         {
             if (_httpClient.BaseAddress == null)
             {
-                throw new ArgumentNullException($"{nameof(Url)} in class derived from {nameof(ApiDispatcher<TResponse>)} must be set");
+                throw new ArgumentNullException($"{nameof(Url)} in class derived from {nameof(ApiDispatcher)} must be set");
             }
 
             TResponse responseObject = default;

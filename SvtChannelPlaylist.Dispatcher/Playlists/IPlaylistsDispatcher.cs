@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace SvtChannelPlaylist.Dispatcher.Playlists
 {
-    public interface IPlaylistsDispatcher : IApiDispatcher<SongList>
+    public interface IPlaylistsDispatcher : IApiDispatcher
     {
         Task<SongList> GetPlaylistByChannelId(int id, DateTime? start, DateTime? end, int? size);
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace SvtChannelPlaylist.Dispatcher.Playlists
 {
-    public class PlaylistsDispatcher : ApiDispatcher<SongList>, IPlaylistsDispatcher
+    public class PlaylistsDispatcher : ApiDispatcher, IPlaylistsDispatcher
     {
         public PlaylistsDispatcher(HttpClient httpClient) : base(httpClient)
         {
@@ -28,7 +28,7 @@ namespace SvtChannelPlaylist.Dispatcher.Playlists
             if (size.HasValue)
                 parameters.Add("size", size.ToString());
 
-            return await GetAsync("getplaylistbychannelid", parameters);
+            return await GetAsync<SongList>("getplaylistbychannelid", parameters);
         }
     }
 }
