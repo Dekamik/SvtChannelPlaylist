@@ -19,7 +19,7 @@ No parameters
 	"recordLabels": [
 		{
 			"name": "AnyRecordLabel1",
-			"artists: [
+			"artists": [
 				"AnyArtist"
 			]
 		},
