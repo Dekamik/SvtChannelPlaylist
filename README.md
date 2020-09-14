@@ -4,15 +4,16 @@ This is an API dispatcher that calls SVT's Open API, fetches data, restructures 
 
 # API endpoints
 
-All calls go to http://localhost:11740/api
-
 The available endpoints can be found below.
 
 ## /playlist
 
 No parameters
 
-### Sample response
+### Sample API call
+
+Url: `http://localhost:11740/api/playlist`
+Metod: `GET`
 
 ```json
 {
