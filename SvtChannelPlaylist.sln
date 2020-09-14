@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvtChannelPlaylist.Api", "S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvtChannelPlaylist.Dispatcher", "SvtChannelPlaylist.Dispatcher\SvtChannelPlaylist.Dispatcher.csproj", "{0954BFAD-9E2A-43C8-A80A-16AD150230CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SvtChannelPlaylist.BusinessLogic", "SvtChannelPlaylist.BusinessLogic\SvtChannelPlaylist.BusinessLogic.csproj", "{6455E592-E26C-44E3-85EF-F037CDF5E862}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{0954BFAD-9E2A-43C8-A80A-16AD150230CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0954BFAD-9E2A-43C8-A80A-16AD150230CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0954BFAD-9E2A-43C8-A80A-16AD150230CF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6455E592-E26C-44E3-85EF-F037CDF5E862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6455E592-E26C-44E3-85EF-F037CDF5E862}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6455E592-E26C-44E3-85EF-F037CDF5E862}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6455E592-E26C-44E3-85EF-F037CDF5E862}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

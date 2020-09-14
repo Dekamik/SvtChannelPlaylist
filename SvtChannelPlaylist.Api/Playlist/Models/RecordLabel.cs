@@ -6,6 +6,6 @@ namespace SvtChannelPlaylist.Api.Playlist.Models
     {
         public string Name { get; set; }
 
-        public IEnumerable<Artist> Artists { get; set; }
+        public IEnumerable<string> Artists { get; set; }
     }
 }

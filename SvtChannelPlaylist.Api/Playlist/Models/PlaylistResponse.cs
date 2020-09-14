@@ -1,9 +1,8 @@
-﻿using SvtChannelPlaylist.Api.Common;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace SvtChannelPlaylist.Api.Playlist.Models
 {
-    public class PlaylistResponse : ApiResponse
+    public class PlaylistResponse
     {
         public IEnumerable<RecordLabel> RecordLabels { get; set; }
     }
